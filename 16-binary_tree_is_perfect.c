@@ -18,7 +18,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree->left || !tree->right)
 		return (2);
 
-	if (tree->left && tree->right)
+	if (tree->left || tree->right)
 	{
 		result1 = binary_tree_is_perfect(tree->left);
 		result2 = binary_tree_is_perfect(tree->right);
